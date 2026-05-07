@@ -1,5 +1,6 @@
 import { Text, View, Linking } from "react-native";
 import { ScanLine } from "lucide-react-native";
+import AppButton from "./components/button/AppButton";
 
 export default function Index() {
   return (
@@ -28,6 +29,10 @@ export default function Index() {
         <Text className="text-zinc-400 text-center mt-6 leading-6 text-base max-w-[260px]">
           Fast and secure QR scanning experience with a clean modern interface.
         </Text>
+
+        <View className="mt-4">
+          <AppButton title="Start & Scan Now"/>
+        </View>
       </View>
 
       <View className="absolute bottom-10 w-full items-center">

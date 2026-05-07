@@ -1,8 +1,12 @@
 import { Text, View, Linking } from "react-native";
 import { ScanLine } from "lucide-react-native";
 import AppButton from "./components/button/AppButton";
+import { router } from "expo-router";
 
 export default function Index() {
+  const clickButton = () => {
+    router.push('/scanpage')
+  }
   return (
     <View className="flex-1 bg-white items-center justify-center px-6 overflow-hidden">
       <View className="absolute top-[-120] left-[-80] w-72 h-72 bg-pink-100 rounded-full blur-3xl" />
@@ -31,7 +35,10 @@ export default function Index() {
         </Text>
 
         <View className="mt-4">
-          <AppButton title="Start & Scan Now"/>
+          <AppButton
+            onPress={clickButton}
+            title="Start & Scan Now"          
+          />
         </View>
       </View>
 
